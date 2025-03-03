@@ -1,3 +1,5 @@
+console.log(__filename); //this is module wrapper
+console.log(__dirname); 
 const url = 'http://myLogger.io/log';
 
 function log(message) {
