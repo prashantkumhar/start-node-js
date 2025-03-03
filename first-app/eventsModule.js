@@ -1,12 +1,11 @@
-const EventEmitter = require('events');
+const Logger = require('./logger');
+const logger = new Logger();
 
-const emitter = new EventEmitter();
 
 // Register an Event
-emitter.on('MessageLogged', (arg) => {
+logger.on('MessageLogged', (arg) => {
   console.log('logger is listening');
-  console.log('data passed through the event listener', arg)
+  console.log('data passed through the event listener', arg);
 });
 
-// Raise an event
-emitter.emit('MessageLogged', { id: 1, url: 'url' });
+logger.log('message');
